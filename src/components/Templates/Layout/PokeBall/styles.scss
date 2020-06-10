@@ -1,0 +1,21 @@
+@import '../../../../style/colors';
+@import '../../../../style/variables';
+
+.pokeball-loader {
+  background-color: $white;
+  border-radius: 5px;
+  padding: 70px $gutter;
+
+  .title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 70px;
+    text-align: center;
+  }
+
+  .image {
+    display: flex;
+    justify-content: center;
+  }
+}

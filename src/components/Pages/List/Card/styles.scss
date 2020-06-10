@@ -1,0 +1,42 @@
+@import '../../../../style/colors';
+@import '../../../../style/mixins';
+@import '../../../../style/variables';
+
+.pokemon-card {
+  background-color: $light-gray;
+  border: 2px solid;
+  border-color: transparent;
+  border-radius: 5px;
+  margin-bottom: $gutter;
+  margin: $gutter;
+  padding: $gutter;
+  width: calc(25% - ((#{$gutter} * 4) + 4px));
+  @include device(mobile) {
+    margin: 15px;
+    width: calc(100% - 49px);
+  }
+  &:hover {
+    background-color: $white;
+    border-color: $ice;
+    box-shadow: 0 0 5px $ice;
+  }
+
+  .img {
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 130px;
+    }
+  }
+
+  .name {
+    color: $gray;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: $gutter;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

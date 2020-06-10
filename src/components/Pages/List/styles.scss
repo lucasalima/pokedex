@@ -1,0 +1,151 @@
+@import '../../../style/colors';
+@import '../../../style/mixins';
+@import '../../../style/variables';
+
+.filter {
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px $gray;
+  margin-bottom: $gutter + 5px;
+  padding: $gutter;
+
+  .field-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -$gutter;
+    margin-left: -$gutter;
+    @include device(mobile) {
+      flex-wrap: wrap;
+      margin-bottom: 0px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-basis: 0;
+      flex-grow: 1;
+      padding-right: $gutter;
+      padding-left: $gutter;
+
+      .field {
+        margin-right: $gutter;
+        width: calc(100% - #{$gutter});
+
+        label {
+          color: $gray;
+          font-family: 'Ubuntu', sans-serif;
+          font-size: 13px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+
+        input {
+          background-color: $white;
+          border: 2px solid $ice;
+          border-radius: 5px;
+          color: $gray;
+          font-family: 'Ubuntu', sans-serif;
+          font-size: 16px;
+          font-weight: 700;
+          height: 36px;
+          letter-spacing: -0.5px;
+          margin-top: $gutter / 3;
+          max-width: calc(100% - 10px);
+          padding: 0px 10px;
+          text-transform: uppercase;
+          width: 100%;
+        }
+      }
+    }
+
+    button {
+      background-color: $yellow;
+      border-radius: 5px;
+      border: unset;
+      color: $black;
+      display: flex;
+      margin-top: auto;
+      margin-right: $gutter;
+      min-height: 42px;
+      opacity: 0.75;
+      padding: 0px $gutter;
+      &:hover {
+        cursor: pointer;
+        opacity: 1;
+      }
+      &:focus, :active {
+        outline: unset;
+      }
+      &:disabled {
+        &:hover {
+          cursor: no-drop;
+        }
+      }
+
+      svg {
+        font-size: 14px;
+        margin-right: 5px;
+        margin-top: auto;
+        margin-bottom: auto;
+        stroke-width: 4px;
+      }
+
+      span {
+        color: $black;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        margin-top: auto;
+        margin-bottom: auto;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.pokemon-list {
+  background-color: $sky;
+  border-radius: 5px;
+  box-shadow: 0 0 10px $gray;
+  flex-wrap: wrap;
+  display: flex;
+  padding: $gutter;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: $gutter;
+
+  button {
+    align-items: center;
+    background-color: $white;
+    border: 2px solid $ice;
+    border-radius: 5px;
+    color: $black;
+    display: flex;
+    font-size: 13px;
+    justify-content: center;
+    margin: 0px $gutter;
+    min-width: 115px;
+    min-height: 40px;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus, :active {
+      outline: unset;
+    }
+    &:disabled {
+      background-color: $ice;
+      &:hover {
+        cursor: no-drop;
+      }
+    }
+
+    span {
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 700;
+      margin: 0px 10px;
+      text-transform: uppercase;
+    }
+  }
+}

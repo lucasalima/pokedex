@@ -1,0 +1,7 @@
+@import '../../../../style/variables';
+
+.app-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: $gutter * 2;
+}
