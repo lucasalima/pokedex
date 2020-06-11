@@ -10,6 +10,7 @@
   margin-bottom: $gutter;
   margin: $gutter;
   padding: $gutter;
+  text-decoration: none;
   width: calc(25% - ((#{$gutter} * 4) + 4px));
   @include device(mobile) {
     margin: 15px;
