@@ -39,7 +39,7 @@ const Detail = () => {
           pokemon.id === -1 ? (
             <NotFound />
           ) : (
-            <div className="pokemon-cell">
+            <div key="pokemon-cell" className="pokemon-cell">
               <div className="image">
                 <img
                   src={`${spriteUrl}/${pokemon.id}.png`}
@@ -50,19 +50,19 @@ const Detail = () => {
               <div className="info">
                 <div className="title">Pokémon profile</div>
                 <ul className="profile">
-                  <li key="id">
+                  <li>
                     <span className="name">ID:</span>
                     <span className="detail">{pokemon.id}</span>
                   </li>
-                  <li key="name">
+                  <li>
                     <span className="name">Name:</span>
                     <span className="detail">{pokemon.name}</span>
                   </li>
-                  <li key="height">
+                  <li>
                     <span className="name">Height:</span>
                     <span className="detail">{pokemon.height}</span>
                   </li>
-                  <li key="weight">
+                  <li>
                     <span className="name">Weight:</span>
                     <span className="detail">{pokemon.weight}</span>
                   </li>
@@ -70,13 +70,13 @@ const Detail = () => {
 
                 <div className="title">Other sprites</div>
                 <ul className="sprites">
-                  <li key="front_default">
+                  <li>
                     <img
                       src={pokemon.sprites.front_default}
                       alt={pokemon.name}
                     />
                   </li>
-                  <li key="back_default">
+                  <li>
                     <img
                       src={pokemon.sprites.back_default}
                       alt={pokemon.name}

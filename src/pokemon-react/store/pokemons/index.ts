@@ -20,8 +20,6 @@ const INITIAL_STATE: PokemonsState = {
       front_shiny: '',
     },
   },
-  error: false,
-  loading: false,
 };
 
 const reducer: Reducer<PokemonsState> = (state = INITIAL_STATE, action) => {
@@ -29,7 +27,6 @@ const reducer: Reducer<PokemonsState> = (state = INITIAL_STATE, action) => {
     case PokemonsTypes.LIST_REQUEST:
       return {
         ...state,
-        loading: true,
         list: {
           count: 0,
           next: '',
@@ -40,15 +37,11 @@ const reducer: Reducer<PokemonsState> = (state = INITIAL_STATE, action) => {
     case PokemonsTypes.LIST_SUCCCES:
       return {
         ...state,
-        loading: false,
-        error: false,
         list: action.payload.data,
       };
     case PokemonsTypes.LIST_FAILURE:
       return {
         ...state,
-        loading: false,
-        error: true,
         list: {
           count: 0,
           next: '',
@@ -59,7 +52,6 @@ const reducer: Reducer<PokemonsState> = (state = INITIAL_STATE, action) => {
     case PokemonsTypes.DETAIL_REQUEST:
       return {
         ...state,
-        loading: true,
         detail: {
           id: 0,
           name: '',
@@ -76,15 +68,11 @@ const reducer: Reducer<PokemonsState> = (state = INITIAL_STATE, action) => {
     case PokemonsTypes.DETAIL_SUCCCES:
       return {
         ...state,
-        loading: false,
-        error: false,
         detail: action.payload.data,
       };
     case PokemonsTypes.DETAIL_FAILURE:
       return {
         ...state,
-        loading: false,
-        error: true,
         detail: {
           id: -1,
           name: '',

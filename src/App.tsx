@@ -1,5 +1,5 @@
 import React from 'react';
-import './style/App.scss';
+import './pokemon-react/style/App.scss';
 
 import Routes from './routes';
 

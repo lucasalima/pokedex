@@ -44,6 +44,4 @@ export interface PokemonDetail {
 export interface PokemonsState {
   readonly list: PokemonResponse;
   readonly detail: PokemonDetail;
-  readonly loading: boolean;
-  readonly error: boolean;
 }
