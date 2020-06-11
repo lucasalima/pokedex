@@ -92,11 +92,7 @@ const PokemonList = () => {
               </div>
             </div>
 
-            <button
-              type="button"
-              onClick={handleSearch}
-              disabled={searchBy.length === 0}
-            >
+            <button type="button" onClick={handleSearch}>
               <FiSearch />
               <span>Search</span>
             </button>
